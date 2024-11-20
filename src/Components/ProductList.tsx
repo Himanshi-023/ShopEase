@@ -8,7 +8,7 @@ const ProductList = () => {
   return (
     
     <div className=' grid grid-cols-3 gap-8 mt-12'>
-      {filterProducts.map((cur)=>{
+      {filterProducts.map((cur:any)=>{
         return  <Product  key={cur.id} {...cur} />  //  {...cur} -- it is used to pass all properties of the cur object as props to the Product component.
       })}
     </div>
