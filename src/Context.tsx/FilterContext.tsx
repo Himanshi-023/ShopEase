@@ -34,7 +34,8 @@ const FilterContext = createContext<FilterProductState | any>(undefined);
 
 // Create a provider component
 const FilterProvider = ({ children }: { children: ReactNode }) => {
-  const { products } = useProductContext();
+  const productContext = useProductContext();
+  const products = productContext ? productContext.products : [];
   const [state, dispatch] = useReducer(FilterProductReducer, initialState);
 
   useEffect(() => {
