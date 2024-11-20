@@ -31,7 +31,7 @@ const Nav:React.FC = () => {
           </button>: <button className="bg-primary hover:bg-ternary  text-white hover:text-black rounded-md py-1.5 px-5" onClick={() => loginWithRedirect()}>
             LOG IN
           </button>}
-         {isAuthenticated && <p>{user.name}</p> }
+         {isAuthenticated && user && <p>{user.name}</p> }
           
           <li>
             <NavLink to="/Cart" className="relative ">
